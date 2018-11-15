@@ -23,7 +23,7 @@
     [self.wkwebview loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:url]]];
     [self.view addSubview:self.btn];
 }
-
+//发起调用
 - (void)goNativeCallJS{
     [self.wkwebview evaluateJavaScript:@"nativeCallJS('callyou')" completionHandler:^(id _Nullable dic, NSError * _Nullable error) {
         NSLog(@"js的回调:%@",dic);
